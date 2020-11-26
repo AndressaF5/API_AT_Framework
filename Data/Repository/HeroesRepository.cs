@@ -40,9 +40,9 @@ namespace Data.Repository
             return false;
         }
 
-        public HeroeDetailDTO GetDetalhe(int id)
+        public HeroeDetailDTO GetDetalhe(int id_Marvel)
         {
-            var consulta = _context.Heroes.FirstOrDefault(x => x.id == id);
+            var consulta = _context.Heroes.FirstOrDefault(x => x.Id_Marvel == id_Marvel);
             if (consulta == null) return null;
 
             return new HeroeDetailDTO()
@@ -53,9 +53,9 @@ namespace Data.Repository
             };
         }
 
-        public bool DeleteHeroe(int id)
+        public bool DeleteHeroe(int id_Marvel)
         {
-            var consulta = _context.Heroes.FirstOrDefault(x => x.id == id);
+            var consulta = _context.Heroes.FirstOrDefault(x => x.Id_Marvel == id_Marvel);
             _context.Remove(consulta);
             var sucesso = _context.SaveChanges();
             if (sucesso > 0) return true;

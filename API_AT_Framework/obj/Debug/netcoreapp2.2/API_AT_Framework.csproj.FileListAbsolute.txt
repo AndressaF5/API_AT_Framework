@@ -46,3 +46,5 @@ C:\Users\andre\source\repos\API_AT_Framework\API_AT_Framework\obj\Debug\netcorea
 C:\Users\andre\source\repos\API_AT_Framework\API_AT_Framework\obj\Debug\netcoreapp2.2\API_AT_Framework.dll
 C:\Users\andre\source\repos\API_AT_Framework\API_AT_Framework\obj\Debug\netcoreapp2.2\API_AT_Framework.pdb
 C:\Users\andre\source\repos\API_AT_Framework\API_AT_Framework\obj\Debug\netcoreapp2.2\API_AT_Framework.genruntimeconfig.cache
+C:\Users\asilva\source\repos\API_AT_Framework\API_AT_Framework\bin\Debug\netcoreapp2.2\Data.dll
+C:\Users\asilva\source\repos\API_AT_Framework\API_AT_Framework\bin\Debug\netcoreapp2.2\Data.pdb

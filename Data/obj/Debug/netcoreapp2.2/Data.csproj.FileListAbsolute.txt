@@ -27,3 +27,4 @@ C:\Users\andre\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.c
 C:\Users\andre\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.dll
 C:\Users\andre\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.pdb
 C:\Users\andre\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.genruntimeconfig.cache
+C:\Users\asilva\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.csproj.CoreCompileInputs.cache
