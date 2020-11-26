@@ -1,0 +1,14 @@
+C:\Users\asilva\source\repos\API_AT_Framework\Data\bin\Debug\netcoreapp2.2\Data.deps.json
+C:\Users\asilva\source\repos\API_AT_Framework\Data\bin\Debug\netcoreapp2.2\Data.dll
+C:\Users\asilva\source\repos\API_AT_Framework\Data\bin\Debug\netcoreapp2.2\Data.pdb
+C:\Users\asilva\source\repos\API_AT_Framework\Data\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\asilva\source\repos\API_AT_Framework\Data\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\asilva\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.csprojAssemblyReference.cache
+C:\Users\asilva\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfoInputs.cache
+C:\Users\asilva\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfo.cs
+C:\Users\asilva\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.csproj.CopyComplete
+C:\Users\asilva\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.dll
+C:\Users\asilva\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.pdb
+C:\Users\asilva\source\repos\API_AT_Framework\Data\bin\Debug\netcoreapp2.2\Data.runtimeconfig.json
+C:\Users\asilva\source\repos\API_AT_Framework\Data\bin\Debug\netcoreapp2.2\Data.runtimeconfig.dev.json
+C:\Users\asilva\source\repos\API_AT_Framework\Data\obj\Debug\netcoreapp2.2\Data.genruntimeconfig.cache
