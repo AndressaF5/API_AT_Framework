@@ -703,23 +703,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asilva\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\andre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asilva\\source\\repos\\API_AT_Framework\\Service\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\source\\repos\\API_AT_Framework\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\asilva\\source\\repos\\API_AT_Framework\\Service\\Service.csproj",
-      "packagesPath": "C:\\Users\\asilva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asilva\\source\\repos\\API_AT_Framework\\Service\\obj\\",
+      "projectPath": "C:\\Users\\andre\\source\\repos\\API_AT_Framework\\Service\\Service.csproj",
+      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andre\\source\\repos\\API_AT_Framework\\Service\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\asilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -732,8 +728,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\asilva\\source\\repos\\API_AT_Framework\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\asilva\\source\\repos\\API_AT_Framework\\Domain\\Domain.csproj"
+            "C:\\Users\\andre\\source\\repos\\API_AT_Framework\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\andre\\source\\repos\\API_AT_Framework\\Domain\\Domain.csproj"
             }
           }
         }

@@ -1,5 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
+<<<<<<< HEAD
 using System.ComponentModel.DataAnnotations.Schema;
+=======
+>>>>>>> b72603dee76b4f6392e6e6f945ddd88f7964b155
 
 namespace Domain.Entities
 {
