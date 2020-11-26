@@ -5,15 +5,19 @@ using System.Threading.Tasks;
 
 namespace API_AT_Framework.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class HeroesController : ControllerBase
     {
         private IHeroesService _heroesService;
-
+        
         public HeroesController(IHeroesService heroesService)
         {
             _heroesService = heroesService;
         }
 
+        [HttpGet]
+        [Route("getListaHeroes")]
         public async Task<ActionResult> GetListaHeroes()
         {
             var result = await _heroesService.GetListaHeroes();
@@ -22,7 +26,9 @@ namespace API_AT_Framework.Controllers
             return Ok(result);
         }
 
-        public async Task<ActionResult> SalvarHeroe(Heroes heroes)
+        [HttpPost]
+        [Route("salvarHeroe")]
+        public async Task<ActionResult> SalvarHeroe([FromBody] Heroes heroes)
         {
             var result = await _heroesService.SalvarHeroe(heroes);
             if (result == true) return Ok("Heroe salvo na lista de favoritos");
@@ -30,6 +36,8 @@ namespace API_AT_Framework.Controllers
             return BadRequest();
         }
 
+        [HttpGet]
+        [Route("getDetalheHeroe")]
         public async Task<ActionResult> GetDetalheHeroe(int id)
         {
             var result = await _heroesService.GetDetalhe(id);
@@ -38,6 +46,8 @@ namespace API_AT_Framework.Controllers
             return Ok(result);
         }
 
+        [HttpDelete]
+        [Route("deleteHeroe")]
         public async Task<ActionResult> DeleteHeroe(int id)
         {
             var result = await _heroesService.DeleteHeroe(id);
