@@ -13,6 +13,7 @@ namespace Data.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id_Marvel = table.Column<int>(nullable: false),
                     name = table.Column<string>(nullable: true),
                     description = table.Column<string>(nullable: true),
                     image = table.Column<string>(nullable: true)

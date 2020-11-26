@@ -9,7 +9,7 @@ namespace Domain.Interfaces.Service
     {
         Task<List<HeroeDetailDTO>> GetListaHeroes();
         Task<bool> SalvarHeroe(Heroes heroes);
-        Task<HeroeDetailDTO> GetDetalhe(int id);
-        Task<bool> DeleteHeroe(int id);
+        Task<HeroeDetailDTO> GetDetalhe(int id_Marvel);
+        Task<bool> DeleteHeroe(int id_Marveld);
     }
 }

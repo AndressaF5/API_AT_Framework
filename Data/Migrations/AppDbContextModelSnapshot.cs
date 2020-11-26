@@ -24,6 +24,8 @@ namespace Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("Id_Marvel");
+
                     b.Property<string>("description");
 
                     b.Property<string>("image");

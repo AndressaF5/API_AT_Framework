@@ -26,14 +26,14 @@ namespace Service.Services
             return Task.FromResult(_heroesRepository.SalvarHeroe(heroes));
         }
 
-        public Task<HeroeDetailDTO> GetDetalhe(int id)
+        public Task<HeroeDetailDTO> GetDetalhe(int id_Marvel)
         {
-            return Task.FromResult(_heroesRepository.GetDetalhe(id));
+            return Task.FromResult(_heroesRepository.GetDetalhe(id_Marvel));
         }
 
-        public Task<bool> DeleteHeroe(int id)
+        public Task<bool> DeleteHeroe(int id_Marvel)
         {
-            return Task.FromResult(_heroesRepository.DeleteHeroe(id));
+            return Task.FromResult(_heroesRepository.DeleteHeroe(id_Marvel));
         }
     }
 }

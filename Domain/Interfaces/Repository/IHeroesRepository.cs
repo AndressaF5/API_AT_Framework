@@ -8,7 +8,7 @@ namespace Domain.Interfaces.Repository
     {
         List<HeroeDetailDTO> GetListaHeroes();
         bool SalvarHeroe(Heroes heroes);
-        HeroeDetailDTO GetDetalhe(int id);
-        bool DeleteHeroe(int id);
+        HeroeDetailDTO GetDetalhe(int id_Marvel);
+        bool DeleteHeroe(int id_Marvel);
     }
 }
