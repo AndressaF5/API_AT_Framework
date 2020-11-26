@@ -53,8 +53,11 @@ namespace API_AT_Framework
                 app.UseHsts();
             }
 
+            // Habilita o middleware para servir o Swagger gerado como um endpoint Json
             app.UseSwagger();
 
+            // Habilite o middleware para servir swagger-ui(HTML, CSS, JS, etc), 
+            //especificando o endpoint Swagger Json
             app.UseSwaggerUI(s =>
             {
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "Api Teste");
