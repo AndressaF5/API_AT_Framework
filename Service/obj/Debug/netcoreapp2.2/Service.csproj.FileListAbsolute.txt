@@ -10,3 +10,15 @@ C:\Users\asilva\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Se
 C:\Users\asilva\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.csproj.CopyComplete
 C:\Users\asilva\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.dll
 C:\Users\asilva\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.pdb
+C:\Users\andre\source\repos\API_AT_Framework\Service\bin\Debug\netcoreapp2.2\Service.deps.json
+C:\Users\andre\source\repos\API_AT_Framework\Service\bin\Debug\netcoreapp2.2\Service.dll
+C:\Users\andre\source\repos\API_AT_Framework\Service\bin\Debug\netcoreapp2.2\Service.pdb
+C:\Users\andre\source\repos\API_AT_Framework\Service\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\andre\source\repos\API_AT_Framework\Service\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\andre\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.csprojAssemblyReference.cache
+C:\Users\andre\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.AssemblyInfoInputs.cache
+C:\Users\andre\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.AssemblyInfo.cs
+C:\Users\andre\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.csproj.CopyComplete
+C:\Users\andre\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.dll
+C:\Users\andre\source\repos\API_AT_Framework\Service\obj\Debug\netcoreapp2.2\Service.pdb
