@@ -11,7 +11,7 @@ namespace Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=HeroesApi;Trusted_Connection=True;MultipleActiveResultSets=true;user=Admin1;Pwd=12345");
+            optionsBuilder.UseSqlServer("Server=tcp:servidortrabalho.database.windows.net,1433;Initial Catalog=db-api-framework;Persist Security Info=False;User ID=andressaf5;Password=Bokunoh3r0;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
     }
 }
