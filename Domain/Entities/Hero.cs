@@ -1,7 +1,14 @@
-﻿namespace Domain.DTO
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Domain.Entities
 {
-    public class HeroeDetailDTO
+    public class Hero
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        public int IdSuperHero { get; set; }
         public string NomeHero { get; set; }
         public string Imagem { get; set; }
         public string Editora { get; set; }

@@ -7,7 +7,7 @@ namespace Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Heroes> Heroes { get; set; }
+        public DbSet<Hero> ListaFavoritos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

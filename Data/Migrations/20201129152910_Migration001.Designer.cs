@@ -3,14 +3,16 @@ using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201129152910_Migration001")]
+    partial class Migration001
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,13 +38,13 @@ namespace Data.Migrations
 
                     b.Property<int>("IdSuperHero");
 
-                    b.Property<string>("IdentidadeSecreta");
-
                     b.Property<string>("Imagem");
 
                     b.Property<string>("Inteligencia");
 
                     b.Property<string>("NomeHero");
+
+                    b.Property<string>("NomeReal");
 
                     b.Property<string>("Poder");
 

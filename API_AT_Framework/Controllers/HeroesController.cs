@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+﻿using Domain.DTO;
 using Domain.Interfaces.Service;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -27,32 +27,41 @@ namespace API_AT_Framework.Controllers
         }
 
         [HttpPost]
-        [Route("salvarHeroe")]
-        public async Task<ActionResult> SalvarHeroe([FromBody] Heroes heroes)
+        [Route("adicionarHeroNaListaFavoritos")]
+        public async Task<ActionResult> AdicionarHeroListaFavoritos([FromBody] HeroPostDTO heroPostDTO)
         {
-            var result = await _heroesService.SalvarHeroe(heroes);
-            if (result == true) return Ok("Heroe salvo na lista de favoritos");
+            var result = await _heroesService.AdicionarHeroListaFavoritos(heroPostDTO);
+            if (result == true) return Ok("Hero salvo na lista de favoritos");
 
             return BadRequest();
         }
 
         [HttpGet]
-        [Route("getDetalheHeroe")]
-        public async Task<ActionResult> GetDetalheHeroe(int id)
+        [Route("getDetalheHero")]
+        public async Task<ActionResult> GetDetalheHero(int id)
         {
-            var result = await _heroesService.GetDetalhe(id);
+            var result = await _heroesService.GetDetalheHero(id);
             if (result == null) return BadRequest();
 
             return Ok(result);
         }
 
         [HttpDelete]
-        [Route("deleteHeroe")]
-        public async Task<ActionResult> DeleteHeroe(int id)
+        [Route("deleteHeroListaFavoritos")]
+        public async Task<ActionResult> DeleteHeroListaFavoritos(int id)
         {
-            var result = await _heroesService.DeleteHeroe(id);
-            if (result == true) return Ok("Heroe removido da lista");
+            var result = await _heroesService.DeleteHeroListaFavoritos(id);
+            if (result == true) return Ok("Hero removido da lista");
             return BadRequest();
+        }
+
+        [HttpPost]
+        [Route("editarHeroListFav")]
+        public async Task<ActionResult> EditarHeroListFav(int idSuperHero, [FromBody] EditHeroDTO obj)
+        {
+            var result = await _heroesService.EditarHeroListFav(idSuperHero, obj);
+            if (result == false) return BadRequest();
+            return Ok("Heroi editado");
         }
     }
 }

@@ -9,12 +9,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Service.Services;
-using Swashbuckle.AspNetCore.Swagger;
 
 namespace API_AT_Framework
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -38,6 +39,17 @@ namespace API_AT_Framework
                 Version = "v1",
                 Title = "Api para trabalho"
             }));
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("http://localhost:8081", "http://localhost:8080")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod();
+                                  });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +74,8 @@ namespace API_AT_Framework
             {
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "Api Teste");
             });
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseHttpsRedirection();
             app.UseMvc();

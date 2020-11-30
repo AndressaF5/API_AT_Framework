@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201126201338_Migration001")]
-    partial class Migration001
+    [Migration("20201129154042_Migration002")]
+    partial class Migration002
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,23 +20,39 @@ namespace Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Domain.Entities.Heroes", b =>
+            modelBuilder.Entity("Domain.Entities.Hero", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Id_Marvel");
+                    b.Property<string>("Apelido");
 
-                    b.Property<string>("description");
+                    b.Property<string>("Combate");
 
-                    b.Property<string>("image");
+                    b.Property<string>("Durabilidade");
 
-                    b.Property<string>("name");
+                    b.Property<string>("Editora");
 
-                    b.HasKey("id");
+                    b.Property<string>("Forca");
 
-                    b.ToTable("Heroes");
+                    b.Property<int>("IdSuperHero");
+
+                    b.Property<string>("IdentidadeSecreta");
+
+                    b.Property<string>("Imagem");
+
+                    b.Property<string>("Inteligencia");
+
+                    b.Property<string>("NomeHero");
+
+                    b.Property<string>("Poder");
+
+                    b.Property<string>("Velocidade");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ListaFavoritos");
                 });
 #pragma warning restore 612, 618
         }

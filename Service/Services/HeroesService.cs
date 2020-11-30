@@ -1,5 +1,4 @@
 ﻿using Domain.DTO;
-using Domain.Entities;
 using Domain.Interfaces.Repository;
 using Domain.Interfaces.Service;
 using System.Collections.Generic;
@@ -16,24 +15,29 @@ namespace Service.Services
             _heroesRepository = heroesRepository;
         }
 
-        public Task<List<HeroeDetailDTO>> GetListaHeroes()
+        public Task<List<ListFavHeroes>> GetListaHeroes()
         {
             return Task.FromResult(_heroesRepository.GetListaHeroes());
         }
 
-        public Task<bool> SalvarHeroe(Heroes heroes)
+        public Task<bool> AdicionarHeroListaFavoritos(HeroPostDTO heroPostDTO)
         {
-            return Task.FromResult(_heroesRepository.SalvarHeroe(heroes));
+            return Task.FromResult(_heroesRepository.AdicionarHeroListaFavoritos(heroPostDTO));
         }
 
-        public Task<HeroeDetailDTO> GetDetalhe(int id_Marvel)
+        public Task<HeroeDetailDTO> GetDetalheHero(int idSuperHero)
         {
-            return Task.FromResult(_heroesRepository.GetDetalhe(id_Marvel));
+            return Task.FromResult(_heroesRepository.GetDetalheHero(idSuperHero));
         }
 
-        public Task<bool> DeleteHeroe(int id_Marvel)
+        public Task<bool> DeleteHeroListaFavoritos(int idSuperHero)
         {
-            return Task.FromResult(_heroesRepository.DeleteHeroe(id_Marvel));
+            return Task.FromResult(_heroesRepository.DeleteHeroListaFavoritos(idSuperHero));
+        }
+
+        public Task<bool> EditarHeroListFav(int idSuperHero, EditHeroDTO obj)
+        {
+            return Task.FromResult(_heroesRepository.EditarHeroListFav(idSuperHero, obj));
         }
     }
 }
