@@ -42,21 +42,21 @@ namespace Data.Repository
             return listaHeroes;
         }
 
-        public bool AdicionarHeroListaFavoritos(HeroPostDTO heroPostDTO)
+        public bool AdicionarHeroListaFavoritos(HeroPostDTO obj)
         {
             var entity = new Hero();
-            entity.IdSuperHero = heroPostDTO.IdSuperHero;
-            entity.NomeHero = heroPostDTO.NomeHero;
-            entity.Imagem = heroPostDTO.Imagem.Replace(@"\", "");
-            entity.Inteligencia = heroPostDTO.Inteligencia;
-            entity.Forca = heroPostDTO.Forca;
-            entity.Velocidade = heroPostDTO.Velocidade;
-            entity.Durabilidade = heroPostDTO.Durabilidade;
-            entity.Poder = heroPostDTO.Poder;
-            entity.Combate = heroPostDTO.Combate;
-            entity.Editora = heroPostDTO.Editora;
-            entity.Apelido = heroPostDTO.Apelido;
-            entity.IdentidadeSecreta = heroPostDTO.IdentidadeSecreta;
+            entity.IdSuperHero = obj.IdSuperHero;
+            entity.NomeHero = obj.NomeHero;
+            entity.Imagem = obj.Imagem.Replace(@"\", "");
+            entity.Inteligencia = obj.Inteligencia == null || obj.Inteligencia == "null" ? "50" : obj.Inteligencia;
+            entity.Forca = obj.Forca == null ? "50" : obj.Forca;
+            entity.Velocidade = obj.Velocidade == null ? "50" : obj.Velocidade;
+            entity.Durabilidade = obj.Durabilidade == null ? "50" : obj.Durabilidade;
+            entity.Poder = obj.Poder == null ? "50" : obj.Poder;
+            entity.Combate = obj.Combate == null ? "50" : obj.Combate;
+            entity.Editora = obj.Editora;
+            entity.Apelido = obj.Apelido != null || obj.Apelido.Count() > 0 ? obj.Apelido[0] : null;
+            entity.IdentidadeSecreta = obj.IdentidadeSecreta != null ? obj.IdentidadeSecreta : "";
 
             _context.Add(entity);
             var sucesso = _context.SaveChanges();
@@ -99,16 +99,12 @@ namespace Data.Repository
             var consulta = _context.ListaFavoritos.FirstOrDefault(x => x.IdSuperHero == idSuperHero);
             if (consulta == null) return false;
 
-            consulta.NomeHero = obj.NomeHero != null ? obj.NomeHero : consulta.NomeHero;
             consulta.Inteligencia = obj.Inteligencia != null ? obj.Inteligencia : consulta.Inteligencia;
             consulta.Forca = obj.Forca != null ? obj.Forca : consulta.Forca;
             consulta.Velocidade = obj.Velocidade != null ? obj.Velocidade : consulta.Velocidade;
             consulta.Durabilidade = obj.Durabilidade != null ? obj.Durabilidade : consulta.Durabilidade;
             consulta.Poder = obj.Poder != null ? obj.Poder : consulta.Poder;
             consulta.Combate = obj.Combate != null ? obj.Combate : consulta.Combate;
-            consulta.Editora = obj.Editora != null ? obj.Editora : consulta.Editora ;
-            consulta.Apelido = obj.Apelido != null ? obj.Apelido : consulta.Apelido;
-            consulta.IdentidadeSecreta = obj.IdentidadeSecreta != null ? obj.IdentidadeSecreta : consulta.IdentidadeSecreta;
 
             var sucesso = _context.SaveChanges();
             if (sucesso > 0) return true;

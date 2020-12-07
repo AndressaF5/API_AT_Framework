@@ -1,4 +1,6 @@
-﻿namespace Domain.DTO
+﻿using System.Collections.Generic;
+
+namespace Domain.DTO
 {
     public class HeroPostDTO
     {
@@ -12,7 +14,7 @@
         public string Poder { get; set; }
         public string Combate { get; set; }
         public string Editora { get; set; }
-        public string Apelido { get; set; }
+        public List<string> Apelido { get; set; }
         public string IdentidadeSecreta { get; set; }
     }
 }
